@@ -54,6 +54,12 @@ userver-create-service [--grpc] [--mongo] [--postgresql] myservice
 
 ```
 
+Перед сборкой:
+
+```bash
+export USERVER_ENABLE_STACK_USAGE_MONITOR=0
+```
+
 ## API
 **POST /add**
 Добавляет новую задачу.  
