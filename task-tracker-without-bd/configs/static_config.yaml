@@ -36,13 +36,13 @@ components_manager:
 
         http-client:
             load-enabled: $is_testing
-            fs-task-processor: fs-task-processor
+#            fs-task-processor: fs-task-processor
 
         dns-client:
             fs-task-processor: fs-task-processor
 
         tests-control:
-            load-enabled: $is-testing
+            load-enabled: $is_testing
             path: /tests/{action}
             method: POST
             task_processor: main-task-processor

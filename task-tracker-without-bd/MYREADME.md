@@ -26,7 +26,7 @@
 Выбираем нужный шаблон:  
 
 - [service_template](https://github.com/userver-framework/service_template) — HTTP  
-- [pg_service_template](https://github.com/userver-framework/pg_service_template) — HTTP + PostgreSQL  
+- [task-tracker-without-bd](https://github.com/userver-framework/task-tracker-without-bd) — HTTP + PostgreSQL  
 - [pg_grpc_service_template](https://github.com/userver-framework/pg_grpc_service_template) — HTTP + PostgreSQL + gRPC  
 - [mongo_grpc_service_template](https://github.com/userver-framework/mongo_grpc_service_template) — HTTP + MongoDB + gRPC  
 
@@ -41,7 +41,7 @@ git clone https://github.com/your-username/your-service.git && cd your-service
 ```bash
 brew install gnu-sed
 
-find . -not -path "./third_party/" -not -path ".git/" -not -path './build_*' -type f | xargs gsed -i 's/pg_service_template/YOUR_SERVICE_NAME/g'
+find . -not -path "./third_party/" -not -path ".git/" -not -path './build_*' -type f | xargs gsed -i 's/task-tracker-without-bd/YOUR_SERVICE_NAME/g'
 
 ```
 Открыть в vscode, он предложит переоткрыть c конфигурацией проекта.   
@@ -80,5 +80,11 @@ Response JSON:
     "status": "new"
 }
 ```
+
+![](screen/2.png)  
+
+![](screen/1.png)
+
+
 **Ошибки:**  
 400 Bad Request — если поля отсутствуют или JSON некорректен.   
