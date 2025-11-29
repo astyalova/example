@@ -85,6 +85,57 @@ Response JSON:
 
 ![](screen/1.png)
 
+**POST /get**
+
+Возвращает все задачи в формате json
+
+Request JSON:  
+```bash
+{
+    "description": "My task",
+    "status": "new",
+    "title": "Test_1"
+}
+```   
+
+```bash
+Response JSON: [
+{
+    "description": "My task",
+    "id": 2,
+    "status": "new",
+    "title": "Test_1"
+}
+
+  {
+    "description": "My task",
+    "id": 1,
+    "status": "new",
+    "title": "Test_1"
+  }
+]
+
+![](screen/3.png)  
+
+![](screen/4.png)
+
+
+```
+
+
+```bash
+Response JSON:
+{
+    "id": 2,
+    "description": "My task",
+    "status": "new",
+    "title": "Test_1"
+}
+```
+![](screen/3.png)  
+
+![](screen/4.png)
+
 
 **Ошибки:**  
-400 Bad Request — если поля отсутствуют или JSON некорректен.   
+400 Bad Request — если поля отсутствуют или json некорректен.   

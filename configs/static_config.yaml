@@ -58,6 +58,11 @@ components_manager:
             path: /add                  # Registering handler by URL '/add'.
             method: POST              # It will only POST requests.
             task_processor: main-task-processor  # Run it on CPU bound task processor
+
+        handler-get-task:                
+            path: /get                  
+            method: GET             
+            task_processor: main-task-processor 
         
         task-storage:
             load-enabled: true

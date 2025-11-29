@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.12...3.31)
 project(example CXX)
 
+#set(USERVER_FEATURE_NO_USERFAULTFD ON)
+
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include(DownloadUserver)
 
@@ -22,6 +24,7 @@ include_directories(src)
 add_library(
     ${PROJECT_NAME}_objs OBJECT
     src/handlers/add_task.cpp
+    src/handlers/get_task.cpp
     src/models/model.cpp
     src/components/task_storage_component.cpp #
 )

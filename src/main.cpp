@@ -12,6 +12,7 @@
 #include <userver/utils/daemon_run.hpp>
 
 #include "handlers/add_task.hpp"
+#include "handlers/get_task.hpp"
 
 int main(int argc, char* argv[]) {
     auto component_list = userver::components::MinimalServerComponentList()
@@ -23,6 +24,7 @@ int main(int argc, char* argv[]) {
                               .Append<userver::congestion_control::Component>()
                               .Append<TaskStorage>()
                               .Append<add::AddTaskHandler>()
+                              .Append<get::GetTasksHandler>()
         ;
 
     return userver::utils::DaemonMain(argc, argv, component_list);
