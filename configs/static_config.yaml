@@ -63,6 +63,11 @@ components_manager:
             path: /get                  
             method: GET             
             task_processor: main-task-processor 
+
+        handler-get-task-by-id:                
+            path: /get/{id}                  
+            method: GET             
+            task_processor: main-task-processor 
         
         task-storage:
             load-enabled: true

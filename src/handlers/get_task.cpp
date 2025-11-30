@@ -1,5 +1,4 @@
 #include "get_task.hpp"
-#include <algorithm>
 
 namespace get {
 
@@ -9,7 +8,6 @@ namespace get {
             userver::server::request::RequestContext&) const {
         try {
             std::unordered_map<int, Task> tasks = storage_->GetStorage();
-            userver::formats::json::Value tasks_json;
             userver::formats::json::ValueBuilder arr(userver::formats::json::Type::kArray);
             for(const auto& [key, value] : tasks) {
                 arr.PushBack(convert::TaskToJson(value));

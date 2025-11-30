@@ -13,6 +13,7 @@
 
 #include "handlers/add_task.hpp"
 #include "handlers/get_task.hpp"
+#include "handlers/get_task_by_id.hpp"
 
 int main(int argc, char* argv[]) {
     auto component_list = userver::components::MinimalServerComponentList()
@@ -25,6 +26,7 @@ int main(int argc, char* argv[]) {
                               .Append<TaskStorage>()
                               .Append<add::AddTaskHandler>()
                               .Append<get::GetTasksHandler>()
+                              .Append<getId::GetTaskByIdHandler>()
         ;
 
     return userver::utils::DaemonMain(argc, argv, component_list);
