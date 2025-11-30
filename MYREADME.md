@@ -85,7 +85,7 @@ Response JSON:
 
 ![](screen/1.png)
 
-**POST /get**
+**GET /get**
 
 Возвращает все задачи в формате json
 
@@ -135,6 +135,31 @@ Response JSON:
 ![](screen/3.png)  
 
 ![](screen/4.png)
+
+**GET /get/id**
+
+Возвращает задачу по айди в формате json
+
+```bash
+Response JSON: [
+{
+    "description": "My task",
+    "id": 2,
+    "status": "new",
+    "title": "Test_1"
+}
+
+  {
+    "description": "My task",
+    "id": 1,
+    "status": "new",
+    "title": "Test_1"
+  }
+]
+
+![](screen/5.png)  
+
+![](screen/6.png)
 
 
 **Ошибки:**  

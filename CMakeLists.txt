@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12...3.31)
 project(example CXX)
 
-set(USERVER_FEATURE_NO_USERFAULTFD ON)
+#set(USERVER_FEATURE_NO_USERFAULTFD ON)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include(DownloadUserver)
